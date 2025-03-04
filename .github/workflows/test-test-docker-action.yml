@@ -1,0 +1,16 @@
+name: Test docker action
+on: 
+  push: 
+    branches: 
+      - master
+jobs:
+  run-test-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello World
+        uses: ./test-docker-action
+        with:
+          who-to-greet: 'Mona the Octocat'
