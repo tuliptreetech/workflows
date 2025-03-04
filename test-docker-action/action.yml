@@ -9,6 +9,8 @@ inputs:
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  output: # id of output
+    description: 'The printed message'
 runs:
   using: 'docker'
   image: 'Dockerfile'
